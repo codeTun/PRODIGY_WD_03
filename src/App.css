@@ -27,11 +27,11 @@ h1 {
 }
 
 .right-border {
-  border-right: 0.2em solid #0074a6;
+  border-right: 0.2em solid #6ee30f;
 }
 
 .bottom-border {
-  border-bottom: 0.2em solid #0074a6;
+  border-bottom: 0.2em solid #6ee30f;
 }
 
 .x-hover:hover::after {
@@ -96,7 +96,7 @@ h1 {
 
 .game-over {
   text-align: center;
-  border: #5468ff 8px;
+  border: #6ee30f 8px;
   border-style: dotted;
   padding: 10px;
   margin-top: 50px;
@@ -106,8 +106,15 @@ h1 {
 .reset-button {
   margin-top: 50px;
   padding: 20px;
-  background-color: #0074a6;
+  background-color: #3c8600;
   color: white;
   width: 100%;
   font-size: 1.5em;
+}
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }

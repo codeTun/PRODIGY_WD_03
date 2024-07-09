@@ -5,6 +5,7 @@ import GameState from "./GameState";
 import Reset from "./Reset";
 import gameOverSoundAsset from "../sounds/game_over.wav";
 import clickSoundAsset from "../sounds/click.wav";
+import Footer from "./Footer";
 
 const gameOverSound = new Audio(gameOverSoundAsset);
 gameOverSound.volume = 0.2;
@@ -106,16 +107,20 @@ function TicTacToe() {
   }, [gameState]);
 
   return (
-    <div>
-      <h1>Tic Tac Toe</h1>
-      <Board
-        playerTurn={playerTurn}
-        tiles={tiles}
-        onTileClick={handleTileClick}
-        strikeClass={strikeClass}
-      />
-      <GameOver gameState={gameState} />
-      <Reset gameState={gameState} onReset={handleReset} />
+    <div className="appContainer"> {/* Use the flex container */}
+      <div> {/* Content container */}
+        <h1>Tic Tac Toe Game</h1>
+        <br />
+        <Board
+          playerTurn={playerTurn}
+          tiles={tiles}
+          onTileClick={handleTileClick}
+          strikeClass={strikeClass}
+        />
+        <GameOver gameState={gameState} />
+        <Reset gameState={gameState} onReset={handleReset} />
+      </div>
+      <Footer />
     </div>
   );
 }
