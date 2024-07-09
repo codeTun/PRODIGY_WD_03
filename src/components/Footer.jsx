@@ -16,6 +16,8 @@ const Footer = () => {
           marginLeft: "5px",
         }}
         href="https://github.com/codeTun"
+        target="_blank"
+        rel="noopener noreferrer"
       >
         codeTun
       </a>
